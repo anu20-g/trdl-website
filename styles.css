@@ -884,3 +884,21 @@ a {
     width: 100%;
   }
 }
+
+/* Suppress Netlify Injected Drawer / Badge Pill */
+[data-netlify-deploy-preview],
+[data-netlify-drawer],
+netlify-drawer,
+#netlify-drawer,
+.netlify-badge,
+iframe[title*="Netlify"],
+iframe[src*="netlify"],
+div:has(> a[href*="netlify.com"]),
+a[href*="netlify.com"][class*="badge"],
+div[class*="netlify"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+

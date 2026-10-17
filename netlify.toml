@@ -1,6 +1,12 @@
 [build]
   publish = "."
 
+[build.processing.snippet]
+  enable = false
+
+[context.production.environment]
+  DISABLE_NETLIFY_DRAWER = "true"
+
 [[headers]]
   for = "/*"
   [headers.values]
